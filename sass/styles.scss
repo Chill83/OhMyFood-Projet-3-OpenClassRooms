@@ -1,0 +1,50 @@
+
+// SASS IMPORTS 
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/reset';
+@import 'base/typography';
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'components/buttons';
+
+
+
+
+// SECTION 1
+// LOCATION
+
+    .location__container {
+        width: 100%;
+        background-color: rgba(214, 214, 214, 0.541);
+        @include flexCenter;
+        box-shadow: inset 0px 6px 10px -6px #00000069;
+        .location__box {
+            @include flexCenter;
+            width: 50%;
+            display: flex;
+            & > * {
+                margin: 5% 15px 5% 0;
+            }
+        }
+    }
+
+    // LOCATION RESPONSIVE
+
+    @media screen and(min-width:768px) {
+        .location__container {
+            height: 3rem;
+            i, p {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+
+
+
+
+

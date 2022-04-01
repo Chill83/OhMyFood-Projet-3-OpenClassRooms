@@ -130,6 +130,7 @@ h1, h2 {
 .location__container .location__box > * {
   margin: 5% 15px 5% 0;
   font-weight: 700;
+  padding: 0.5rem 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -173,7 +174,7 @@ h1, h2 {
   margin: 0 1rem 1rem 1rem;
 }
 
-.explore__container a {
+.explore__container .explore__btn {
   font-weight: 400;
   padding: 1rem 1.6rem;
   margin-top: 1rem;
@@ -184,7 +185,96 @@ h1, h2 {
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.explore__container a:hover {
+.explore__container .explore__btn:hover {
   opacity: 0.8;
+}
+
+.functioning__container {
+  padding: 3rem 1.5rem;
+}
+
+.functioning__container h3 {
+  font-weight: 900;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.functioning__bloc {
+  padding-left: 0.7rem;
+}
+
+.functioning__card {
+  position: relative;
+  background-color: rgba(214, 214, 214, 0.315);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2rem;
+  margin-bottom: 1.8rem;
+  padding: 1.8rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.functioning__card:hover {
+  background-color: #9256dc34;
+  cursor: pointer;
+}
+
+.functioning__card:hover i {
+  color: #9356DC;
+}
+
+.functioning__card .functioning__number {
+  position: absolute;
+  left: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-color: #9356DC;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.functioning__card i {
+  font-size: 1.5rem;
+  color: rgba(104, 104, 104, 0.945);
+  margin-right: 1.7rem;
+  padding-left: 0.7rem;
+}
+
+.functioning__card .card__number {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .functioning__container h3 {
+    margin: 0 0 2rem 1rem;
+  }
+  .functioning__bloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0;
+  }
+  .functioning__bloc .functioning__card {
+    width: 31%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

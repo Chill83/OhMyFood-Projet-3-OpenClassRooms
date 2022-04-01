@@ -14,7 +14,7 @@
 
 
 
-// SECTION 1
+// SECTION 1 //
 // LOCATION
 
     .location__container {
@@ -28,6 +28,7 @@
             display: flex;
             & > * {
                 margin: 5% 15px 5% 0;
+                font-weight: 700;
             }
         }
     }
@@ -39,12 +40,45 @@
             height: 3rem;
             i, p {
                 font-size: 1.4rem;
+                font-weight: 00;
             }
         }
     }
 
 
+// EXPLORE
 
+    .explore__container {
+        background-color: rgba(214, 214, 214, 0.315);
+        padding: 2.5rem 1.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        & > * {
+                font-size: 1.2rem;
+                font-weight: 300;
+                text-align: center;
+                margin-bottom: 1.3rem;
+        }
+        h3 {
+                font-weight: 900;
+                font-size: 1.7rem;
+                margin: 0 1rem 1rem 1rem;
+        }
+        a {         
+            font-weight: 400;
+            padding: 1rem 1.6rem;
+            margin-top: 1rem;
+            border-radius: 2rem;           
+            background: $btn-gradient;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            &:hover {
+                opacity: 0.8;
+            }
+        }  
+    }
 
 
 

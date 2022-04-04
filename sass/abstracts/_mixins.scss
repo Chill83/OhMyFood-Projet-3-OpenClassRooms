@@ -16,3 +16,24 @@
         }
     }
 }
+
+// ANIMATIONS
+
+@keyframes fullHeart {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        transform-origin: left;
+        opacity: 0.25;
+    }
+    50% {     
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}

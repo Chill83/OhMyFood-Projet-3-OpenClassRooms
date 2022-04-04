@@ -1,5 +1,44 @@
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+@-webkit-keyframes fullHeart {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fullHeart {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -48,6 +87,7 @@ td, th {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 * {
@@ -139,7 +179,6 @@ h1, h2 {
   }
   .location__container i, .location__container p {
     font-size: 1.4rem;
-    font-weight: 00;
   }
 }
 
@@ -183,10 +222,14 @@ h1, h2 {
   color: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .explore__container .explore__btn:hover {
   opacity: 0.8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 1px 8px 10px;
+          box-shadow: rgba(0, 0, 0, 0.24) 1px 8px 10px;
 }
 
 .functioning__container {
@@ -217,6 +260,8 @@ h1, h2 {
   padding: 1.8rem;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .functioning__card:hover {
@@ -275,6 +320,168 @@ h1, h2 {
   }
   .functioning__bloc .functioning__card {
     width: 31%;
+  }
+}
+
+.restaurants__container {
+  padding: 3rem 1.5rem;
+  background-color: rgba(214, 214, 214, 0.315);
+}
+
+.restaurants__container h3 {
+  font-weight: 900;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.restaurants__card {
+  position: relative;
+  height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 2rem;
+}
+
+.restaurants__card a {
+  width: 100%;
+  height: 100%;
+}
+
+.new::before {
+  content: 'Nouveau';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2rem;
+  width: 7rem;
+  background-color: #99e2d0;
+  color: #38947f;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 0.2rem;
+}
+
+.card__picture {
+  height: 70%;
+}
+
+.card__picture img {
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.card__description {
+  height: 30%;
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card__description .description__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.card__description .description__text h5 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+}
+
+.card__description .description__text p {
+  font-size: 1.1rem;
+}
+
+.description__icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.description__icon .fa-regular {
+  position: relative;
+}
+
+.description__icon .fa-regular::after {
+  position: absolute;
+  left: -2%;
+  content: '\f004';
+  background: #FF79DA;
+  background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), color-stop(80%, #9356DC));
+  background: linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.description__icon .fa-regular:hover::after {
+  -webkit-animation: fullHeart 0.3s ease-in-out;
+          animation: fullHeart 0.3s ease-in-out;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .restaurants__container h3 {
+    margin-left: 1rem;
+  }
+  .restaurants__bloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .restaurants__card {
+    width: 45%;
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .restaurants__card {
+    width: 23%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -41,7 +41,6 @@
             height: 3rem;
             i, p {
                 font-size: 1.4rem;
-                font-weight: 00;
             }
         }
     }
@@ -75,8 +74,10 @@
             background: $btn-gradient;
             color: white;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            transition: 0.2s;
             &:hover {
                 opacity: 0.8;
+                box-shadow: rgba(0, 0, 0, 0.24) 1px 8px 10px;
             }
         }  
     }
@@ -107,6 +108,7 @@
         padding: 1.8rem;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         @include functioningCardHover;
+        transition: 0.2s;
         .functioning__number {
             position: absolute;
             left: -15px;
@@ -142,5 +144,130 @@
             .functioning__card {
                 width: 31%;
             }
+        }
+    }
+
+
+// RESTAURANTS 
+
+    .restaurants__container {
+        padding: 3rem 1.5rem;
+        background-color: rgba(214, 214, 214, 0.315);
+        h3 {
+            font-weight: 900;
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .restaurants__card {
+        position: relative;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 1.5rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-bottom: 2rem;
+        a {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .new::before {
+        content: 'Nouveau'; 
+        position: absolute;
+        top: 1rem;
+        right: 1rem; 
+        z-index: 10;   
+        @include flexCenter;
+        height: 2rem;
+        width: 7rem;
+        background-color: #99e2d0;
+        color: #38947f;
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-radius: 0.2rem;
+    }
+
+
+    .card__picture {
+        height: 70%;
+        img {
+            position: relative;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+    }
+    
+    .card__description {
+        height: 30%;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .description__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            h5 {
+                font-size: 1.3rem;
+                font-weight: 800;
+                margin-bottom: 0.3rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    .description__icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+        .fa-regular {
+            position: relative;
+            &::after {
+                position: absolute;
+                left: -2%;
+                content: '\f004';
+                background: #FF79DA;
+                background: -webkit-linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
+                background: -moz-linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
+                background: linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
+                transition: 0.2s;
+                opacity: 0;
+            }
+            &:hover::after {
+                animation: fullHeart 0.3s ease-in-out;
+                opacity: 1;
+            }
+        }    
+    }
+
+    // RESTAURANTS REPSONSIVE 
+
+    @media screen and(min-width:768px) {
+        .restaurants__container h3 {
+            margin-left: 1rem;
+        }
+        .restaurants__bloc {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .restaurants__card {
+            width: 45%;
+            margin: 1rem auto;
+        }
+    }
+
+    @media screen and(min-width:992px) {
+        .restaurants__card {
+            width: 23%;
         }
     }

@@ -12,9 +12,10 @@
 @import 'components/buttons';
 
 
-
+                                       // INDEX //
 
 // SECTION 1 //
+
 // LOCATION
 
     .location__container {
@@ -136,6 +137,7 @@
         }
     }
 
+                                    // SECTION 2 //
 
 // RESTAURANTS 
 
@@ -261,3 +263,49 @@
         }
     }
 
+
+
+                                // MENU 1 LA NOTE ENCHANTEE //
+
+// SECTION 1
+
+.menu__img {
+    width: 100%;
+    height: 20rem;
+    background-image: url(../images/restaurants/lanoteenchantee.jpg);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+}
+
+.menu__bloc {
+    border-radius: 3rem 3rem 0 0;
+    margin-top: -4rem;
+    background-color: white;
+    padding: 2rem 1.5rem;
+}
+
+.menu__titleandicon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    h2 {
+        font-size: 2.2rem;
+    }
+    i {
+        cursor: pointer;
+        @include heartAnimation;
+    }
+}
+
+.category__title {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    .titleunderline {
+        height: 3px;
+        width: 3rem;
+        background-color: #99e2d0;
+        margin-top: 5px;
+    }
+}

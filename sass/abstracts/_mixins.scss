@@ -32,6 +32,28 @@
     }
 }
 
+@mixin heartAnimation {
+    position: relative;
+    &::after {
+        position: absolute;
+        left: -2%;
+        content: '\f004';
+        background: #FF79DA;
+        background: -webkit-linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
+        background: -moz-linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
+        background: linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        transition: 0.2s;
+        opacity: 0;
+    }
+    &:hover::after {
+        animation: fullHeart 0.3s ease-in-out;
+        opacity: 1;
+    }
+}
+
 // ANIMATIONS
 
 @keyframes fullHeart {

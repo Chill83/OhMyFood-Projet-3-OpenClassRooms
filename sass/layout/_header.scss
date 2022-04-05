@@ -1,5 +1,5 @@
 
-// HEADER
+// HEADER INDEX
 
 .indexheader {
     width: 100%;
@@ -16,10 +16,41 @@
     }
 }
 
-    // HEADER RESPONSIVE
+    // HEADER INDEX RESPONSIVE
 
 @media screen and(min-width:768px) {
     .indexheader {
         height: 6rem;
+    }
+}
+
+
+
+
+// HEADER MENU
+
+
+.menuheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0 1rem 0;
+    i {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+    }
+    .head__img {
+        @include flexCenter;
+        width: 50%;
+        img {
+            min-width: 12rem;
+            max-width: 18rem;
+        }
+    }
+    .head__forflex {
+        width: 2rem;
+        height: 1rem;
     }
 }

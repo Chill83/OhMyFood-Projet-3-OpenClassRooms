@@ -141,6 +141,49 @@ h1, h2 {
   }
 }
 
+.menuheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0 1rem 0;
+}
+
+.menuheader i {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.menuheader .head__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.menuheader .head__img img {
+  min-width: 12rem;
+  max-width: 18rem;
+}
+
+.menuheader .head__forflex {
+  width: 2rem;
+  height: 1rem;
+}
+
 .footer__container {
   padding: 2rem 2rem 1rem 2rem;
   background-color: #353535;
@@ -543,5 +586,76 @@ h1, h2 {
   .restaurants__card {
     width: 23%;
   }
+}
+
+.menu__img {
+  width: 100%;
+  height: 20rem;
+  background-image: url(../images/restaurants/lanoteenchantee.jpg);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}
+
+.menu__bloc {
+  border-radius: 3rem 3rem 0 0;
+  margin-top: -4rem;
+  background-color: white;
+  padding: 2rem 1.5rem;
+}
+
+.menu__titleandicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+}
+
+.menu__titleandicon h2 {
+  font-size: 2.2rem;
+}
+
+.menu__titleandicon i {
+  cursor: pointer;
+  position: relative;
+}
+
+.menu__titleandicon i::after {
+  position: absolute;
+  left: -2%;
+  content: '\f004';
+  background: #FF79DA;
+  background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), color-stop(80%, #9356DC));
+  background: linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.menu__titleandicon i:hover::after {
+  -webkit-animation: fullHeart 0.3s ease-in-out;
+          animation: fullHeart 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.category__title {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.category__title .titleunderline {
+  height: 3px;
+  width: 3rem;
+  background-color: #99e2d0;
+  margin-top: 5px;
 }
 /*# sourceMappingURL=styles.css.map */

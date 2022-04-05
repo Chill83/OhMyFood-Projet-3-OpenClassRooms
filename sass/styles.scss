@@ -67,18 +67,7 @@
                 margin: 0 1rem 1rem 1rem;
         }
         .explore__btn {         
-            font-weight: 400;
-            padding: 1rem 1.6rem;
-            margin-top: 1rem;
-            border-radius: 2rem;           
-            background: $btn-gradient;
-            color: white;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            transition: 0.2s;
-            &:hover {
-                opacity: 0.8;
-                box-shadow: rgba(0, 0, 0, 0.24) 1px 8px 10px;
-            }
+            @include btnStyle;
         }  
     }
 
@@ -271,3 +260,4 @@
             width: 23%;
         }
     }
+

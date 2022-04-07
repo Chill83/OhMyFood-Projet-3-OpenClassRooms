@@ -215,6 +215,7 @@ h1, h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 14rem;
 }
 
 .footer__container .footer__links i {
@@ -591,16 +592,30 @@ h1, h2 {
 .menu__img {
   width: 100%;
   height: 20rem;
-  background-image: url(../images/restaurants/lanoteenchantee.jpg);
-  background-repeat: none;
   background-position: center;
   background-size: cover;
+}
+
+.img__menu1 {
+  background-image: url(../images/restaurants/lapalettedugout.jpg);
+}
+
+.img__menu2 {
+  background-image: url(../images/restaurants/lanoteenchantee.jpg);
+}
+
+.img__menu3 {
+  background-image: url(../images/restaurants/alafrancaise.jpg);
+}
+
+.img__menu4 {
+  background-image: url(../images/restaurants/ledelicedessens.jpg);
 }
 
 .menu__bloc {
   border-radius: 3rem 3rem 0 0;
   margin-top: -4rem;
-  background-color: white;
+  background-color: #f7f7f7;
   padding: 2rem 1.5rem;
 }
 
@@ -648,7 +663,7 @@ h1, h2 {
 }
 
 .category__title {
-  margin-top: 2rem;
+  margin: 2rem 0 1rem 0.3rem;
   font-size: 1.2rem;
 }
 
@@ -657,5 +672,74 @@ h1, h2 {
   width: 3rem;
   background-color: #99e2d0;
   margin-top: 5px;
+}
+
+.category__card {
+  background-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1rem;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.category__card .card__title h6 {
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.category__card .card__textandprice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.category__card .card__textandprice .card__price {
+  font-weight: 800;
+  margin-left: 1rem;
+}
+
+.menu__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  padding: 1rem 1.6rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  background: linear-gradient(347deg, #9356dc 21%, #ff79da 98%);
+  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  width: 50%;
+  margin: 3rem auto;
+}
+
+.menu__btn:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 1px 8px 10px;
+          box-shadow: rgba(0, 0, 0, 0.24) 1px 8px 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .menu__bloc {
+    width: 60rem;
+    margin: -4rem auto;
+  }
+  .menu__btn {
+    margin-bottom: 6rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

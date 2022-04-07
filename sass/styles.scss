@@ -265,23 +265,37 @@
 
 
 
-                                // MENU 1 LA NOTE ENCHANTEE //
+                                // MENU 1 LA PALETTE DU GOUT //
 
 // SECTION 1
+
+
 
 .menu__img {
     width: 100%;
     height: 20rem;
-    background-image: url(../images/restaurants/lanoteenchantee.jpg);
-    background-repeat: none;
+    // background-repeat: none;
     background-position: center;
     background-size: cover;
+}
+
+.img__menu1 {
+    background-image: url(../images/restaurants/lapalettedugout.jpg);
+}
+.img__menu2 {
+    background-image: url(../images/restaurants/lanoteenchantee.jpg);
+}
+.img__menu3 {
+    background-image: url(../images/restaurants/alafrancaise.jpg);
+}
+.img__menu4 {
+    background-image: url(../images/restaurants/ledelicedessens.jpg);
 }
 
 .menu__bloc {
     border-radius: 3rem 3rem 0 0;
     margin-top: -4rem;
-    background-color: white;
+    background-color: rgb(247, 247, 247);
     padding: 2rem 1.5rem;
 }
 
@@ -300,7 +314,7 @@
 }
 
 .category__title {
-    margin-top: 2rem;
+    margin: 2rem 0 1rem 0.3rem;
     font-size: 1.2rem;
     .titleunderline {
         height: 3px;
@@ -309,3 +323,44 @@
         margin-top: 5px;
     }
 }
+
+.category__card {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    .card__title h6{
+        font-weight: 800;
+        font-size: 1.4rem;
+        margin-bottom: 0.3rem;
+    }
+    .card__textandprice {
+        display: flex;
+        justify-content: space-between;
+        .card__price {
+            font-weight: 800;
+            margin-left: 1rem
+        }
+    }
+}
+
+.menu__btn {
+    @include flexCenter;
+    @include btnStyle;
+    width: 50%;
+    margin: 3rem auto;
+}
+
+
+    // SECTION 1 MENU RESPONSIVE //
+
+    @media screen and(min-width:992px) {
+        .menu__bloc {
+            width: 60rem;
+            margin: -4rem auto;
+        }
+        .menu__btn {
+            margin-bottom: 6rem;
+        }
+    }

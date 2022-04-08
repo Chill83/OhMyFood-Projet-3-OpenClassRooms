@@ -5,11 +5,8 @@
 @import 'abstracts/mixins';
 @import 'base/reset';
 @import 'base/typography';
-@import 'layout/navigation';
-@import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'components/buttons';
 
 
                                        // INDEX //
@@ -219,25 +216,7 @@
         font-size: 2rem;
         margin-right: 1rem;
         .fa-regular {
-            position: relative;
-            &::after {
-                position: absolute;
-                left: -2%;
-                content: '\f004';
-                background: #FF79DA;
-                background: -webkit-linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
-                background: -moz-linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
-                background: linear-gradient(to top right, #FF79DA 0%, #9356DC 80%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-weight: bold;
-                transition: 0.2s;
-                opacity: 0;
-            }
-            &:hover::after {
-                animation: fullHeart 0.3s ease-in-out;
-                opacity: 1;
-            }
+            @include heartAnimation;
         }    
     }
 
@@ -325,22 +304,61 @@
 }
 
 .category__card {
+    position: relative;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 1rem;
     padding: 0.8rem 1rem;
     margin-bottom: 1rem;
+    overflow: hidden;
+    &:hover .card__checkbox {
+        transform: translateX(-100%);
+        display: flex;
+    }
+    &:hover i {
+        animation: checkRotate 0.8s ease-in-out;
+    }
+    &:hover .card__price {
+        margin-right: 4.5rem;
+    }
+
+    .card__checkbox {
+        position: absolute;
+        bottom: 0;
+        right: -5.2rem;
+        width: 5rem;
+        height: 100%;
+        @include flexCenter;
+        background-color: #99e2d0;
+        border-radius: 0 1rem 1rem 0;
+        transition: 0.4s ease-in-out;
+        i {
+            font-size: 1.6rem;
+            color: white;
+        }
+    }
     .card__title h6{
         font-weight: 800;
         font-size: 1.4rem;
         margin-bottom: 0.3rem;
+        padding-right: 4rem;
     }
     .card__textandprice {
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
         .card__price {
             font-weight: 800;
-            margin-left: 1rem
+            margin-left: 1rem;
+            transition: 0.4s ease-in-out;
+            white-space: initial;
+            overflow: initial;
+            text-overflow: initial;
         }
     }
 }
@@ -348,7 +366,7 @@
 .menu__btn {
     @include flexCenter;
     @include btnStyle;
-    width: 50%;
+    width: 20rem;
     margin: 3rem auto;
 }
 
@@ -362,5 +380,6 @@
         }
         .menu__btn {
             margin-bottom: 6rem;
+            // width: 30rem;
         }
     }

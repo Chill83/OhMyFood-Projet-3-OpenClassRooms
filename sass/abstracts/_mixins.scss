@@ -74,3 +74,12 @@
         opacity: 1;
     }
 }
+
+@keyframes checkRotate {
+    0% {
+        transform: rotate(-240deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}

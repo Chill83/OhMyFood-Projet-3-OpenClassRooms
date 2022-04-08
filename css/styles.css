@@ -60,6 +60,32 @@
   }
 }
 
+@-webkit-keyframes fadeInCards {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeInCards {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -567,7 +593,7 @@ h1, h2 {
 
 .description__icon .fa-regular::after {
   position: absolute;
-  left: -2%;
+  left: 0%;
   content: '\f004';
   background: #FF79DA;
   background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), color-stop(80%, #9356DC));
@@ -665,7 +691,7 @@ h1, h2 {
 
 .menu__titleandicon i::after {
   position: absolute;
-  left: -2%;
+  left: 0%;
   content: '\f004';
   background: #FF79DA;
   background: -webkit-gradient(linear, left bottom, right top, from(#FF79DA), color-stop(80%, #9356DC));
@@ -694,6 +720,23 @@ h1, h2 {
   width: 3rem;
   background-color: #99e2d0;
   margin-top: 5px;
+}
+
+.category__bloc {
+  -webkit-animation: fadeInCards 1s ease-in-out;
+          animation: fadeInCards 1s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.dishes {
+  -webkit-animation: fadeInCards 1.4s ease-in-out;
+          animation: fadeInCards 1.4s ease-in-out;
+}
+
+.dessert {
+  -webkit-animation: fadeInCards 1.7s ease-in-out;
+          animation: fadeInCards 1.7s ease-in-out;
 }
 
 .category__card {

@@ -13,6 +13,65 @@
 
 // SECTION 1 //
 
+
+// LOADING SPINNER
+
+
+
+    .loadingspinner {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.9;
+        background-color: white;
+        z-index: 100;
+        animation: loadingSpinnerDisappearance 0.01s ease-in-out;
+        animation-fill-mode: both;
+        animation-delay: 2s;
+        .loadingspinner__icons {
+            margin-bottom: 5rem;          
+                .fa-solid {
+                    font-size: 5rem;
+                    margin-right: 2rem;
+                    color: black;
+                    animation: loadingIcons infinite 0.9s alternate ;
+                }
+                .fa-mobile-screen-button {
+                    animation-delay: 0.2s;
+                }
+                .fa-bell-concierge {
+                    animation-delay: 0.3s;
+                }
+                .fa-utensils {
+                    animation-delay: 0.4s;
+                }
+        }
+
+        .loadingspinner__dot {
+            display: flex;
+                .dot {
+                    width: 2rem;
+                    height: 2rem;
+                    background-color: $tertiary-color;
+                    border-radius: 50px;
+                    margin: 0 0.8rem;
+                    animation: loadingDots infinite 0.3s alternate;
+                }
+                .dot2 {
+                    background-color: $secondary-color;
+                    animation-delay: 0.1s;
+                }
+                .dot3 {
+                    background-color: $primary-color;
+                    animation-delay: 0.2s;
+                }
+        }       
+    }
+
 // LOCATION
 
     .location__container {
@@ -253,7 +312,6 @@
 .menu__img {
     width: 100%;
     height: 20rem;
-    // background-repeat: none;
     background-position: center;
     background-size: cover;
 }
@@ -393,6 +451,5 @@
         }
         .menu__btn {
             margin-bottom: 6rem;
-            // width: 30rem;
         }
     }

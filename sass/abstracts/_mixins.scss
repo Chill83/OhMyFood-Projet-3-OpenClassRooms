@@ -95,3 +95,32 @@
         transform: translateY(0);
     }
 }
+
+@keyframes loadingIcons {
+    0% {
+        transform: translateX(0);               
+    }
+    50% {
+        transform: translateY(40%);
+        
+    }
+    100% {
+        transform: translateY(-40%);            
+    }
+}
+
+@keyframes loadingDots {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-40%);
+    }
+}
+
+@keyframes loadingSpinnerDisappearance {
+    100% {
+        opacity: 0;
+        z-index: -100;
+    }
+}

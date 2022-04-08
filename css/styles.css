@@ -86,6 +86,72 @@
   }
 }
 
+@-webkit-keyframes loadingIcons {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateY(40%);
+            transform: translateY(40%);
+  }
+  100% {
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+}
+
+@keyframes loadingIcons {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateY(40%);
+            transform: translateY(40%);
+  }
+  100% {
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+}
+
+@-webkit-keyframes loadingDots {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+}
+
+@keyframes loadingDots {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-40%);
+            transform: translateY(-40%);
+  }
+}
+
+@-webkit-keyframes loadingSpinnerDisappearance {
+  100% {
+    opacity: 0;
+    z-index: -100;
+  }
+}
+
+@keyframes loadingSpinnerDisappearance {
+  100% {
+    opacity: 0;
+    z-index: -100;
+  }
+}
+
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -287,6 +353,89 @@ h1, h2 {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+.loadingspinner {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.9;
+  background-color: white;
+  z-index: 100;
+  -webkit-animation: loadingSpinnerDisappearance 0.01s ease-in-out;
+          animation: loadingSpinnerDisappearance 0.01s ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.loadingspinner .loadingspinner__icons {
+  margin-bottom: 5rem;
+}
+
+.loadingspinner .loadingspinner__icons .fa-solid {
+  font-size: 5rem;
+  margin-right: 2rem;
+  color: black;
+  -webkit-animation: loadingIcons infinite 0.9s alternate;
+          animation: loadingIcons infinite 0.9s alternate;
+}
+
+.loadingspinner .loadingspinner__icons .fa-mobile-screen-button {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.loadingspinner .loadingspinner__icons .fa-bell-concierge {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.loadingspinner .loadingspinner__icons .fa-utensils {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.loadingspinner .loadingspinner__dot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.loadingspinner .loadingspinner__dot .dot {
+  width: 2rem;
+  height: 2rem;
+  background-color: #99E2D0;
+  border-radius: 50px;
+  margin: 0 0.8rem;
+  -webkit-animation: loadingDots infinite 0.3s alternate;
+          animation: loadingDots infinite 0.3s alternate;
+}
+
+.loadingspinner .loadingspinner__dot .dot2 {
+  background-color: #FF79DA;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.loadingspinner .loadingspinner__dot .dot3 {
+  background-color: #9356DC;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .location__container {

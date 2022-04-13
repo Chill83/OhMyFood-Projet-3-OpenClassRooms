@@ -231,7 +231,7 @@
         @include flexCenter;
         height: 2rem;
         width: 7rem;
-        background-color: #99e2d0;
+        background-color: $tertiary-color;
         color: #38947f;
         font-size: 1.1rem;
         font-weight: 700;
@@ -356,7 +356,7 @@
     .titleunderline {
         height: 3px;
         width: 3rem;
-        background-color: #99e2d0;
+        background-color: $tertiary-color;
         margin-top: 5px;
     }
 }
@@ -400,7 +400,7 @@
         width: 5rem;
         height: 100%;
         @include flexCenter;
-        background-color: #99e2d0;
+        background-color: $tertiary-color;
         border-radius: 0 1rem 1rem 0;
         transition: 0.4s ease-in-out;
         i {

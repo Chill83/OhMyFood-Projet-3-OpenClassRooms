@@ -40,6 +40,10 @@
     i {
         font-size: 1.5rem;
         margin-left: 1rem;
+        transition: 0.2s ease-in-out;
+        &:hover {
+            transform: translateY(10%) scale(1.2);
+        }
     }
     .head__img {
         @include flexCenter;

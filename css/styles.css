@@ -273,6 +273,13 @@ h1, h2 {
 .menuheader i {
   font-size: 1.5rem;
   margin-left: 1rem;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.menuheader i:hover {
+  -webkit-transform: translateY(10%) scale(1.2);
+          transform: translateY(10%) scale(1.2);
 }
 
 .menuheader .head__img {
@@ -320,29 +327,37 @@ h1, h2 {
   padding: 1rem 0;
 }
 
-.footer__container .footer__links > * {
+.footer__container .footer__links li {
   margin-bottom: 0.5rem;
-  color: white;
 }
 
-.footer__container .footer__links a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 14rem;
+.footer__container .footer__links li a {
+  color: white;
+  font-size: 1.1rem;
 }
 
 .footer__container .footer__links i {
   font-size: 1rem;
-  margin-right: 1rem;
+  margin-right: 0.7rem;
 }
 
 .footer__container .footer__links .fa-utensils {
-  padding-right: 0.4rem;
+  padding-right: 0.35rem;
 }
 
 @media screen and (min-width: 768px) {
   .footer__container > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__links ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -567,7 +582,7 @@ h1, h2 {
 
 .functioning__card:hover {
   background-color: #9256dc34;
-  cursor: pointer;
+  cursor: default;
 }
 
 .functioning__card:hover i {
@@ -674,7 +689,7 @@ h1, h2 {
           align-items: center;
   height: 2rem;
   width: 7rem;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #38947f;
   font-size: 1.1rem;
   font-weight: 700;
@@ -867,7 +882,7 @@ h1, h2 {
 .category__title .titleunderline {
   height: 3px;
   width: 3rem;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   margin-top: 5px;
 }
 
@@ -931,7 +946,7 @@ h1, h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   border-radius: 0 1rem 1rem 0;
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;

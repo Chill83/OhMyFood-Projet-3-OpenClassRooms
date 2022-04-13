@@ -10,7 +10,7 @@
 @mixin functioningCardHover {
     &:hover {
         background-color: #9256dc34;
-        cursor: pointer;
+        cursor: default;
         i {
             color: $primary-color;
         }

@@ -46,7 +46,7 @@
         -webkit-text-fill-color: transparent;
         font-weight: bold;
         transition: 0.2s;
-        opacity: 0;
+        opacity: 0; 
     }
     &:hover::after {
         animation: fullHeart 0.3s ease-in-out;
